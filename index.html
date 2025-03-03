@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #ffb6c1;
             line-height: 1.6;
         }
         .container {
@@ -14,7 +14,7 @@
             overflow: hidden;
         }
         .main-info {
-            background: #333;
+            background: #ff8396;
             color: #fff;
             padding: 20px;
         }
@@ -22,13 +22,32 @@
             margin: 0;
         }
         .hobbies, .lewis, .course, .job, .fun-fact {
-            background: #e7e7e7;
+            background: #ffe9ec;
             padding: 15px;
             margin-bottom: 10px;
         }
         Ul {
             list-style-type: square;
         }
+        button {
+      background-color: #ffe9ec; 
+      color: black; 
+      font-size: 11px;
+      padding: 5px 12px; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffb6e6; 
+    }
+
+ 
+    button:focus {
+      outline: black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
     </style>
 </head>
 <body>
@@ -41,6 +60,9 @@
             <h1>Brynlee Keeran&rsquo;s Introductions Website</h1>
             <h1>Preferred Name: Brynlee</h1>
         </header>
+
+        <button onclick="alert('April showers bring May flowers, but what do May flowers bring? Pilgrims!')">Click for a Joke</button>
+
 
         <section class="lewis">
 			<h2>Year at Lewis: 3</h2>
@@ -85,13 +107,30 @@
 
         <section class="fun-fact">
             <h2>Fun Fact</h2>
-            <p>I have a pet sheep named &lsquo;Goat&rsquo;.</p>
+            <p>I have a pet sheep named &lsquo;Goat&rsquo;</p>
+            <button id="toggleButton">For another fun fact, click me</button>
+            <p id="text" style="display: none;">This was a trick! Just wanted to remind you that your special! XOXO</p>
+          
         </section>
 
   	</section>
-	    <p>Last Updated on 2/14/2025</p>
+	    <p>Last Updated on 3/2/2025</p>
         <p>My discord username is brynlee.keeran or you can <a href="mailto:brynleeckeeran@lewisu.edu">email me.</a></p>
     	</section>
     </div>
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const text = document.getElementById('text');
+    
+        button.addEventListener('click', () => {
+          if (text.style.display === 'none') {
+            text.style.display = 'block';
+          } else {
+            text.style.display = 'none';
+          }
+        });
+      </script>
+
 </body>
 </html>
